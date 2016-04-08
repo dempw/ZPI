@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		<style media="screen" type="text/css">
+			#map { height: 400px; }
+		</style>
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	</head>
+	
+	<body>
+		
+		
+		<div id="map"></div>
+		
+		<script>
+			var map = L.map('map').setView([51.1078, 17.0385], 13);
+			
+
+			L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
+				maxZoom: 16,
+				
+			}).addTo(map);
+			
+			/*
+			
+			var horizontal_range = [17.0000, 17.1];
+			var vertical_range = [51.050, 51.15];
+			
+			for (var i = 0; i < 5000; i++) {
+				var x = 17 + Math.random() * 0.1;
+				var y = 51.05 + Math.random() * 0.1;
+				
+				var number_of_calls = 1;
+				var circle = L.circle([y, x], number_of_calls, {
+					//color: 'red',
+					stroke: false,
+					fillColor: '#f03',
+					fillOpacity: 0.5
+				}).addTo(map);
+			}
+			
+			//*/
+			
+			
+			//*
+			var number_of_calls = 90;
+			
+			var circle = L.circle([51.11, 17.03], number_of_calls, {
+				//color: 'red',
+				stroke: false,
+				fillColor: '#f03',
+				fillOpacity: 0.5
+			}).addTo(map);
+			
+			var number_of_calls = 70;
+			
+			var circle = L.circle([51.110, 17.0321], number_of_calls, {
+				//color: 'red',
+				stroke: false,
+				fillColor: '#f03',
+				fillOpacity: 0.5
+			}).addTo(map);
+			
+			//*/
+		</script>
+	
+	</body>
+</html>
